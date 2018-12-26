@@ -12,9 +12,16 @@ namespace MobilePhone
 {
     public partial class MobileMagazines : Form
     {
+        private List<MobilePhones> mobiles;
+
         public MobileMagazines()
         {
             InitializeComponent();
+            this.mobiles = new List<MobilePhones>()
+            {
+                new MobilePhones() { },
+                new MobilePhones() { }
+            };
         }
     }
 }
