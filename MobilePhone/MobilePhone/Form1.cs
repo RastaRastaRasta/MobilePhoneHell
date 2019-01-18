@@ -110,6 +110,11 @@ namespace MobilePhone
                         listView1.Items.Add("5.1");
                     }
                 }
-            }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+    }
         }
     
