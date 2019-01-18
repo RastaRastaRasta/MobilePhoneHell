@@ -31,15 +31,20 @@ namespace MobilePhone
 
         private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            comboBox2.Items.Clear();
 
             if (comboBox1.SelectedIndex == 0)
             {
                 comboBox2.Items.AddRange(new object[] { "Apple", "Samsung", "Huawei" });
             }
+            
+
             if (comboBox1.SelectedIndex == 1)
             {
                 comboBox2.Items.AddRange(new object[] { "Xiaomi", "Samsung", "Huawei" });
             }
+            
+
             if (comboBox1.SelectedIndex == 2)
             {
                 comboBox2.Items.AddRange(new object[] { "ZTE", "LG", "Nokia" });
