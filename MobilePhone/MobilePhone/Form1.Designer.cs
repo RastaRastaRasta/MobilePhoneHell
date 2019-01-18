@@ -55,6 +55,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(205, 21);
             this.comboBox2.TabIndex = 1;
+            this.comboBox2.SelectionChangeCommitted += new System.EventHandler(this.comboBox2_SelectionChangeCommitted);
             // 
             // listView1
             // 
@@ -67,6 +68,7 @@
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "Двойная камера",
@@ -74,9 +76,9 @@
             "Водонепронициаемый",
             "Противоударный",
             "Функция NFC"});
-            this.checkedListBox1.Location = new System.Drawing.Point(533, 39);
+            this.checkedListBox1.Location = new System.Drawing.Point(533, 35);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(164, 229);
+            this.checkedListBox1.Size = new System.Drawing.Size(164, 184);
             this.checkedListBox1.TabIndex = 3;
             // 
             // label1
@@ -117,13 +119,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(90, 232);
+            this.button1.Location = new System.Drawing.Point(581, 246);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Поиск";
+            this.button1.Text = "Применить";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MobileMagazines
             // 
