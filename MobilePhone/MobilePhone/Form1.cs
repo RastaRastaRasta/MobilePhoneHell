@@ -12,35 +12,37 @@ namespace MobilePhone
 {
     public partial class MobileMagazines : Form
     {
-        string[] s1 = new string[] { "Связной" };
-        string[] s2 = new string[] { "Теле2" };
-        string[] s3 = new string[] { "МТС" };
-         
 
 
-    public MobileMagazines()
+
+        public MobileMagazines()
         {
-            InitializeComponent();
-            comboBox1.Items.AddRange(s1);
-            comboBox1.Items.AddRange(s2);
-            comboBox1.Items.AddRange(s3);
-           
+            {
+                InitializeComponent();
+                comboBox1.Items.AddRange(new object[] { "Связной", "Теле2", "МТС" });
+                
+            }
+
+
 
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+
+
+        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
 
             if (comboBox1.SelectedIndex == 0)
             {
-                comboBox2.Items.AddRange(new string[] { "Apple", "Samsung", "Huawei" });
+                comboBox2.Items.AddRange(new object[] { "Apple", "Samsung", "Huawei" });
             }
             if (comboBox1.SelectedIndex == 1)
             {
-                comboBox2.Items.AddRange(new string[] { "Xiaomi", "Samsung", "Huawei" });
+                comboBox2.Items.AddRange(new object[] { "Xiaomi", "Samsung", "Huawei" });
             }
             if (comboBox1.SelectedIndex == 2)
             {
-                comboBox2.Items.AddRange(new string[] { "ZTE", "LG", "Nokia" });
+                comboBox2.Items.AddRange(new object[] { "ZTE", "LG", "Nokia" });
             }
         }
     }
