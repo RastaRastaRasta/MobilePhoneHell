@@ -20,7 +20,7 @@ namespace MobilePhone
             {
                 InitializeComponent();
                 comboBox1.Items.AddRange(new object[] { "Связной", "Теле2", "МТС" });
-                
+
             }
 
 
@@ -37,13 +37,13 @@ namespace MobilePhone
             {
                 comboBox2.Items.AddRange(new object[] { "Apple", "Samsung", "Huawei" });
             }
-            
+
 
             if (comboBox1.SelectedIndex == 1)
             {
-                comboBox2.Items.AddRange(new object[] { "Xiaomi", "Samsung", "Huawei" });
+                comboBox2.Items.AddRange(new object[] { "Xiaomi", "Asus", "Meizu" });
             }
-            
+
 
             if (comboBox1.SelectedIndex == 2)
             {
@@ -51,26 +51,64 @@ namespace MobilePhone
             }
         }
 
-        private void comboBox2_SelectionChangeCommitted(object sender, EventArgs e)
+
+
+        private void button1_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-            if (comboBox2.SelectedIndex == 0)
+            if ((comboBox1.SelectedIndex == 0) && (comboBox2.SelectedIndex == 0))
             {
-                listView1.Items.Add("234567");
-                listView1.Items.Add("436477");
-                listView1.Items.Add("657890");
+                listView1.Items.Add("IPhone 7");
+                listView1.Items.Add("IPhone 8");
+                listView1.Items.Add("Iphone X");
             }
-            if (comboBox2.SelectedIndex == 1)
+            if ((comboBox1.SelectedIndex == 0) && (comboBox2.SelectedIndex == 1))
             {
-                listView1.Items.Add("fdgdgd");
-                listView1.Items.Add("jumuuk");
-                listView1.Items.Add("6kbnbb");
+                listView1.Items.Add("A5");
+                listView1.Items.Add("S9");
+                listView1.Items.Add("C8");
             }
-            if (comboBox2.SelectedIndex == 2)
+            if ((comboBox1.SelectedIndex == 0) && (comboBox2.SelectedIndex == 2))
             {
-                listView1.Items.Add("234nbn");
-                listView1.Items.Add("nbnn77");
-                listView1.Items.Add("65qw90");
+                listView1.Items.Add("Mate 20 lite");
+                listView1.Items.Add("nova 3");
+                listView1.Items.Add("Y6 Prime");
+            }
+            if ((comboBox1.SelectedIndex == 1) && (comboBox2.SelectedIndex == 0))
+            {
+                listView1.Items.Add("Mi 8 Lite");
+                listView1.Items.Add("Redmi Note 6 Pro");
+                listView1.Items.Add("Redmi 5");
+            }
+            if ((comboBox1.SelectedIndex == 1) && (comboBox2.SelectedIndex == 1))
+            {
+                listView1.Items.Add("ZenFone 5Z ");
+                listView1.Items.Add("ZenFone 4 Selfie Pro");
+                listView1.Items.Add("ZenFone Max Pro");
+            }
+            if ((comboBox1.SelectedIndex == 1) && (comboBox2.SelectedIndex == 2))
+            {
+                listView1.Items.Add("M5C");
+                listView1.Items.Add("M8 LITE");
+                listView1.Items.Add("NOTE 8");
+            }
+            if ((comboBox1.SelectedIndex == 2) && (comboBox2.SelectedIndex == 0))
+            {
+                listView1.Items.Add("Axon 9 PRO");
+                listView1.Items.Add("Blade V9 Vita");
+                listView1.Items.Add("Blade A6 max");
+            }
+            if ((comboBox1.SelectedIndex == 2) && (comboBox2.SelectedIndex == 1))
+            {
+                listView1.Items.Add("Q6");
+                listView1.Items.Add("G7 ThinQ");
+                listView1.Items.Add("X venture");
+            }
+            if ((comboBox1.SelectedIndex == 2) && (comboBox2.SelectedIndex == 2))
+            {
+                listView1.Items.Add("8.1");
+                listView1.Items.Add("6.1");
+                listView1.Items.Add("5.1");
             }
         }
     }
