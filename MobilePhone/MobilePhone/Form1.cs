@@ -113,11 +113,76 @@ namespace MobilePhone
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listView1.Items.Clear();
-            
-            if ((checkBox3.Checked == true) && (checkBox5.Checked = true))
+            private void button1_Click(object sender, EventArgs e)
             {
-                listView1.Items.Add("IPhone X");
+                listView1.Items.Clear();
+
+
+                //comboBox2.SelectedIndex = -1; 
+
+                if ((checkBox1.Checked == true) && (checkBox2.Checked == false) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == true))
+                {
+                    listView1.Items.Add("Iphone X");
+                }
+
+                if ((checkBox1.Checked == true) && (checkBox2.Checked == false) && (checkBox3.Checked == false) && (checkBox4.Checked == false) && (checkBox5.Checked == false))
+                {
+                    listView1.Items.Add("Iphone X");
+                }
+
+                if ((checkBox1.Checked == false) && (checkBox2.Checked == false) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == false))
+                {
+                    listView1.Items.Add("Iphone X");
+                }
+
+                if ((checkBox1.Checked == false) && (checkBox2.Checked == false) && (checkBox3.Checked == false) && (checkBox4.Checked == false) && (checkBox5.Checked == true))
+                {
+                    listView1.Items.Add("Iphone X");
+                }
+
+                if ((checkBox1.Checked == true) && (checkBox2.Checked == false) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == false))
+                {
+                    listView1.Items.Add("Iphone X");
+                }
+
+                if ((checkBox1.Checked == false) && (checkBox2.Checked == false) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == true))
+                {
+                    listView1.Items.Add("Iphone X");
+                    //listView1.Items.Clear(); 
+
+                    if ((checkBox1.Checked == true) && (checkBox2.Checked == true) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == false))
+                    {
+                        listView1.Items.Add("S9");
+                    }
+
+                    if ((checkBox1.Checked == true) && (checkBox2.Checked == false) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == false))
+                    {
+                        listView1.Items.Add("S9");
+                    }
+
+                    //listView1.Items.Clear(); 
+
+                    if ((checkBox1.Checked == false) && (checkBox2.Checked == false) && (checkBox3.Checked == false) && (checkBox4.Checked == true) && (checkBox5.Checked == true))
+                    {
+                        listView1.Items.Add("nova 3");
+                    }
+
+                    /*if (checkBox5.Checked == true) 
+                    { 
+                    listView1.Items.Add("IPhone 7"); 
+                    listView1.Items.Add("IPhone 9"); 
+                    listView1.Items.Add("Iphone X"); 
+                    listView1.Items.Add("A5"); 
+                    listView1.Items.Add("S9"); 
+                    listView1.Items.Add("C8"); 
+                    listView1.Items.Add("Mate 20 lite"); 
+                    listView1.Items.Add("M8 LITE"); 
+                    listView1.Items.Add("5.1"); 
+
+                    }*/
+
+
+                }
             }
         }
     }
