@@ -12,18 +12,36 @@ namespace MobilePhone
 {
     public partial class MobileMagazines : Form
     {
-        private List<MobilePhones> mobiles;
+        string[] s1 = new string[] { "Связной" };
+        string[] s2 = new string[] { "Теле2" };
+        string[] s3 = new string[] { "МТС" };
+         
 
-        public MobileMagazines()
+
+    public MobileMagazines()
         {
             InitializeComponent();
-            this.mobiles = new List<MobilePhones>()
-            {
-                new MobilePhones() { },
-                new MobilePhones() { }
-            };
+            comboBox1.Items.AddRange(s1);
+            comboBox1.Items.AddRange(s2);
+            comboBox1.Items.AddRange(s3);
+           
+
         }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
-  }
+            if (comboBox1.SelectedIndex == 0)
+            {
+                comboBox2.Items.AddRange(new string[] { "Apple", "Samsung", "Huawei" });
+            }
+            if (comboBox1.SelectedIndex == 1)
+            {
+                comboBox2.Items.AddRange(new string[] { "Xiaomi", "Samsung", "Huawei" });
+            }
+            if (comboBox1.SelectedIndex == 2)
+            {
+                comboBox2.Items.AddRange(new string[] { "ZTE", "LG", "Nokia" });
+            }
+        }
+    }
 }
