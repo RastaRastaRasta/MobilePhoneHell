@@ -111,8 +111,7 @@ namespace MobilePhone
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        
             private void button1_Click(object sender, EventArgs e)
             {
                 listView1.Items.Clear();
@@ -186,5 +185,5 @@ namespace MobilePhone
             }
         }
     }
-}
+
     
