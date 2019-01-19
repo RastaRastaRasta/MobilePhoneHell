@@ -205,6 +205,11 @@ namespace MobilePhone
             comboBox2.Items.Clear();
             listView1.Items.Clear();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+        }
     }
 }
       
