@@ -13,21 +13,42 @@ namespace MobilePhone
     public partial class MobileMagazines : Form
     {
 
+        private List<MobilePhones> Phones = new List<MobilePhones>();
 
 
         public MobileMagazines()
         {
-            {
-                InitializeComponent();
-                comboBox1.Items.AddRange(new object[] { "Связной", "Теле2", "МТС" });
-
-            }
-
-
+            InitializeComponent();
+            comboBox1.Items.AddRange(new object[] { "Связной", "Теле2", "МТС" });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Apple", Name = "IPhone 7", Params = new List<PhoneParams>() { PhoneParams.WaterProtected, PhoneParams.NFC } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Apple", Name = "IPhone 8", Params = new List<PhoneParams>() { PhoneParams.NFC, PhoneParams.NoBreak } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Apple", Name = "IPhone X", Params = new List<PhoneParams>() { PhoneParams.NFC, PhoneParams.doubleSim, PhoneParams.doubleCam, PhoneParams.NoBreak } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Samsung", Name = "A5", Params = new List<PhoneParams>() { PhoneParams.WaterProtected, PhoneParams.doubleSim, PhoneParams.doubleCam, PhoneParams.NoBreak } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Samsung", Name = "S9", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.doubleCam, PhoneParams.WaterProtected } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Samsung", Name = "C8", Params = new List<PhoneParams>() { PhoneParams.doubleSim } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Huawei", Name = "Mate 20 lite", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.doubleCam } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Huawei", Name = "nova 3", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.NoBreak } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Huawei", Name = "Y6 Prime", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.NFC, PhoneParams.NoBreak } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Xiaomi", Name = "Mi 8 Lite", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.doubleCam, PhoneParams.WaterProtected } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Xiaomi", Name = "Redmi Note 6 Pro", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.NFC, PhoneParams.doubleCam } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Xiaomi", Name = "Redmi 5", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.NFC } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Asus", Name = "ZenFone 5Z", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.WaterProtected } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Asus", Name = "ZenFone 4 Selfie Pro", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.NoBreak, PhoneParams.WaterProtected } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Asus", Name = "ZenFone Max Pro", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.NoBreak } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Meizu", Name = "M5C", Params = new List<PhoneParams>() { PhoneParams.doubleSim } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Meizu", Name = "M8 LITE", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.doubleCam } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Meizu", Name = "NOTE 8", Params = new List<PhoneParams>() { PhoneParams.doubleCam, PhoneParams.NFC } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "ZTE", Name = "Axon 9 PRO", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.NFC, PhoneParams.NoBreak, PhoneParams.WaterProtected, PhoneParams.doubleCam } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "ZTE", Name = "Blade V9 Vita", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.doubleCam } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "ZTE", Name = "Blade A6 max", Params = new List<PhoneParams>() { PhoneParams.doubleSim } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "LG", Name = "Q6", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.doubleCam } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "LG", Name = "G7 ThinQ", Params = new List<PhoneParams>() { PhoneParams.doubleCam } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "LG", Name = "X venture", Params = new List<PhoneParams>() { PhoneParams.NoBreak, PhoneParams.WaterProtected } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Nokia", Name = "8.1", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.WaterProtected } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Nokia", Name = "6.1", Params = new List<PhoneParams>() { PhoneParams.doubleSim, PhoneParams.NFC, PhoneParams.NoBreak } });
+            this.Phones.Add(new MobilePhones() { ProductOwner = "Nokia", Name = "5.1", Params = new List<PhoneParams>() { PhoneParams.doubleCam, PhoneParams.NFC, PhoneParams.WaterProtected } });
 
         }
-
-
 
         private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -57,130 +78,127 @@ namespace MobilePhone
             listView1.Items.Clear();
             if ((comboBox1.SelectedIndex == 0) && (comboBox2.SelectedIndex == 0))
             {
-                listView1.Items.Add("IPhone 7");
-                listView1.Items.Add("IPhone 8");
-                listView1.Items.Add("Iphone X");
+
+                var filteredPhones = this.Phones.Where(t => t.ProductOwner.Equals("Apple"));
+                foreach (var phone in filteredPhones)
+                {
+                    listView1.Items.Add(phone.Name);
+                }
             }
             if ((comboBox1.SelectedIndex == 0) && (comboBox2.SelectedIndex == 1))
             {
-                listView1.Items.Add("A5");
-                listView1.Items.Add("S9");
-                listView1.Items.Add("C8");
+
+                var filteredPhones = this.Phones.Where(t => t.ProductOwner.Equals("Samsung"));
+                foreach (var phone in filteredPhones)
+                {
+                    listView1.Items.Add(phone.Name);
+                }
             }
             if ((comboBox1.SelectedIndex == 0) && (comboBox2.SelectedIndex == 2))
             {
-                listView1.Items.Add("Mate 20 lite");
-                listView1.Items.Add("nova 3");
-                listView1.Items.Add("Y6 Prime");
+
+                var filteredPhones = this.Phones.Where(t => t.ProductOwner.Equals("Huawei"));
+                foreach (var phone in filteredPhones)
+                {
+                    listView1.Items.Add(phone.Name);
+                }
             }
             if ((comboBox1.SelectedIndex == 1) && (comboBox2.SelectedIndex == 0))
             {
-                listView1.Items.Add("Mi 8 Lite");
-                listView1.Items.Add("Redmi Note 6 Pro");
-                listView1.Items.Add("Redmi 5");
+
+                var filteredPhones = this.Phones.Where(t => t.ProductOwner.Equals("Xiaomi"));
+                foreach (var phone in filteredPhones)
+                {
+                    listView1.Items.Add(phone.Name);
+                }
             }
             if ((comboBox1.SelectedIndex == 1) && (comboBox2.SelectedIndex == 1))
             {
-                listView1.Items.Add("ZenFone 5Z ");
-                listView1.Items.Add("ZenFone 4 Selfie Pro");
-                listView1.Items.Add("ZenFone Max Pro");
+
+                var filteredPhones = this.Phones.Where(t => t.ProductOwner.Equals("Asus"));
+                foreach (var phone in filteredPhones)
+                {
+                    listView1.Items.Add(phone.Name);
+                }
             }
             if ((comboBox1.SelectedIndex == 1) && (comboBox2.SelectedIndex == 2))
             {
-                listView1.Items.Add("M5C");
-                listView1.Items.Add("M8 LITE");
-                listView1.Items.Add("NOTE 8");
+
+                var filteredPhones = this.Phones.Where(t => t.ProductOwner.Equals("Meizu"));
+                foreach (var phone in filteredPhones)
+                {
+                    listView1.Items.Add(phone.Name);
+                }
             }
             if ((comboBox1.SelectedIndex == 2) && (comboBox2.SelectedIndex == 0))
             {
-                listView1.Items.Add("Axon 9 PRO");
-                listView1.Items.Add("Blade V9 Vita");
-                listView1.Items.Add("Blade A6 max");
+
+                var filteredPhones = this.Phones.Where(t => t.ProductOwner.Equals("ZTE"));
+                foreach (var phone in filteredPhones)
+                {
+                    listView1.Items.Add(phone.Name);
+                }
             }
             if ((comboBox1.SelectedIndex == 2) && (comboBox2.SelectedIndex == 1))
             {
-                listView1.Items.Add("Q6");
-                listView1.Items.Add("G7 ThinQ");
-                listView1.Items.Add("X venture");
+
+                var filteredPhones = this.Phones.Where(t => t.ProductOwner.Equals("LG"));
+                foreach (var phone in filteredPhones)
+                {
+                    listView1.Items.Add(phone.Name);
+                }
             }
             if ((comboBox1.SelectedIndex == 2) && (comboBox2.SelectedIndex == 2))
             {
-                listView1.Items.Add("8.1");
-                listView1.Items.Add("6.1");
-                listView1.Items.Add("5.1");
+
+                var filteredPhones = this.Phones.Where(t => t.ProductOwner.Equals("Nokia"));
+                foreach (var phone in filteredPhones)
+                {
+                    listView1.Items.Add(phone.Name);
+                }
             }
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
 
+            var FilteredParams = new List<PhoneParams>();
+            if (checkBox1.Checked)
+                FilteredParams.Add(PhoneParams.doubleCam);
+            if (checkBox2.Checked)
+                FilteredParams.Add(PhoneParams.doubleSim);
+            if (checkBox3.Checked)
+                FilteredParams.Add(PhoneParams.WaterProtected);
+            if (checkBox4.Checked)
+                FilteredParams.Add(PhoneParams.NoBreak);
+            if (checkBox5.Checked)
+                FilteredParams.Add(PhoneParams.NFC);
 
-            //comboBox2.SelectedIndex = -1; 
+            IEnumerable<MobilePhones> filteredPhones = this.Phones.Where(r => r.ProductOwner.Equals(comboBox2.Text));
 
-            if ((checkBox1.Checked == true) && (checkBox2.Checked == false) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == true))
+
+
+
+            foreach (var param in FilteredParams)
             {
-                listView1.Items.Add("Iphone X");
+                filteredPhones = filteredPhones.Where(t => t.Params.Contains(param)).ToArray();
             }
-
-            if ((checkBox1.Checked == true) && (checkBox2.Checked == false) && (checkBox3.Checked == false) && (checkBox4.Checked == false) && (checkBox5.Checked == false))
+            foreach (var phone in filteredPhones)
             {
-                listView1.Items.Add("Iphone X");
-            }
-
-            if ((checkBox1.Checked == false) && (checkBox2.Checked == false) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == false))
-            {
-                listView1.Items.Add("Iphone X");
-            }
-
-            if ((checkBox1.Checked == false) && (checkBox2.Checked == false) && (checkBox3.Checked == false) && (checkBox4.Checked == false) && (checkBox5.Checked == true))
-            {
-                listView1.Items.Add("Iphone X");
-            }
-
-            if ((checkBox1.Checked == true) && (checkBox2.Checked == false) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == false))
-            {
-                listView1.Items.Add("Iphone X");
-            }
-
-            if ((checkBox1.Checked == false) && (checkBox2.Checked == false) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == true))
-            {
-                listView1.Items.Add("Iphone X");
-                //listView1.Items.Clear(); 
-
-                if ((checkBox1.Checked == true) && (checkBox2.Checked == true) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == false))
-                {
-                    listView1.Items.Add("S9");
-                }
-
-                if ((checkBox1.Checked == true) && (checkBox2.Checked == false) && (checkBox3.Checked == true) && (checkBox4.Checked == false) && (checkBox5.Checked == false))
-                {
-                    listView1.Items.Add("S9");
-                }
-
-                //listView1.Items.Clear(); 
-
-                if ((checkBox1.Checked == false) && (checkBox2.Checked == false) && (checkBox3.Checked == false) && (checkBox4.Checked == true) && (checkBox5.Checked == true))
-                {
-                    listView1.Items.Add("nova 3");
-                }
-
-                /*if (checkBox5.Checked == true) 
-                { 
-                listView1.Items.Add("IPhone 7"); 
-                listView1.Items.Add("IPhone 9"); 
-                listView1.Items.Add("Iphone X"); 
-                listView1.Items.Add("A5"); 
-                listView1.Items.Add("S9"); 
-                listView1.Items.Add("C8"); 
-                listView1.Items.Add("Mate 20 lite"); 
-                listView1.Items.Add("M8 LITE"); 
-                listView1.Items.Add("5.1"); 
-
-                }*/
+                listView1.Items.Add(phone.Name);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
+            listView1.Items.Clear();
+
+        }
     }
-}       
+}
       
     
